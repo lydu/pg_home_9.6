@@ -1,0 +1,9 @@
+name: Weds_postgresql_9.6_only_home 
+description: |
+   postgresql  images
+version:  1.0.0
+category:  demo
+maintainer:  weds
+license: demo:v1.0.0
+projectURL: https://github.com/lydu/pg_home_9.6
+

@@ -1,0 +1,17 @@
+version: '2'
+services:
+  pgmasterhome:
+     image: 10.0.0.96:5000/database/pg_ip_pglogical_pathman:v3 
+     hostname: pgmaster
+     labels:
+      io.rancher.scheduler.global: 'true'
+      io.rancher.scheduler.affinity:host_label: key1=104
+     networks: 
+       - docker_gwbridge
+     ports:
+       - "30000:5432"
+     volumes:
+       - /opt/pgmaster/pgdata:/var/lib/pgsql/9.6/data/base
+     privileged: true
+     tty: true
+
